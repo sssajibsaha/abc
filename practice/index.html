@@ -1,82 +1,564 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Site Title Here</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">HookCraft - Social Media Hook & Title Optimizer | TikTok, Shorts, Reels</title>
+    <meta id="page-meta-desc" name="description" content="Free tool to optimize social media titles, hooks, and captions for TikTok, YouTube Shorts, Instagram Reels, X, and LinkedIn. Boost CTR, view time, and engagement.">
+    <meta name="keywords" content="tiktok hook generator, youtube shorts title optimizer, reels caption character counter, viral hooks templates, social media hook analyzer">
 
-        <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-        <!-- Place favicon.ico in the root directory -->
+    <!-- OpenGraph SEO Tags -->
+    <meta property="og:title" content="HookCraft - Social Media Hook & Title Optimizer">
+    <meta property="og:description" content="Optimize titles and hooks for TikTok, Shorts, and Reels to maximize CTR and viewer retention.">
+    <meta property="og:type" content="website">
 
-		<!-- CSS here -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/meanmenu.css">
-        <link rel="stylesheet" href="css/slick.css">
-        <link rel="stylesheet" href="css/default.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-    </head>
-    <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+    <!-- Google Search Console Verification Meta Tag Placeholder -->
+    <meta id="gsc-meta-tag" name="google-site-verification" content="">
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        },
+                        dark: {
+                            800: '#111827',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json" id="json-ld-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HookCraft",
+      "url": "https://example.com",
+      "description": "Free Social Media Hook and Title Optimizer for TikTok, YouTube Shorts, and Instagram Reels.",
+      "applicationCategory": "SocialMediaApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased">
 
-        <!-- Add your site or application content here -->
-            <header class="transparent-header">
-                <div class="header-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-9">
-                                <div class="header-info">
-                                    <ul>
-                                        <li>
-                                            <div class="header-info-icon">
-                                                <i class="fas fa-check-square"></i>
-                                            </div>
-                                            <div class="header-info-text">
-                                                    <span>Available Support</span>
-                                                    <h4>24/7 Online Support</h4>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-3"></div>
+    <!-- Dynamic GA4 / AdSense Container -->
+    <div id="analytics-adsense-container"></div>
+
+    <!-- Header Navigation -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Brand Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white p-2.5 rounded-xl shadow-md flex items-center justify-center">
+                        <i class="fa-solid fa-bolt text-lg"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="text-xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent" id="site-logo-text">HookCraft</a>
+                        <span class="block text-xs text-slate-500 font-medium">Hook & Title Optimizer</span>
+                    </div>
+                </div>
+
+                <!-- Nav Links & Admin Button -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#optimizer" class="hover:text-emerald-600 transition">Optimizer</a>
+                    <a href="#templates" class="hover:text-emerald-600 transition">Hook Templates</a>
+                    <a href="#guide" class="hover:text-emerald-600 transition">Hook Science Guide</a>
+                    <a href="#faq" class="hover:text-emerald-600 transition">FAQ</a>
+                </nav>
+
+                <div class="flex items-center space-x-3">
+                    <button onclick="openModal('admin-modal')" class="inline-flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg text-xs font-semibold transition border border-slate-300" title="Site Settings & AdSense / GA4 Dashboard">
+                        <i class="fa-solid fa-gear text-slate-500"></i>
+                        <span>Admin Config</span>
+                    </button>
+                    <a href="#templates" class="hidden sm:inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow-sm">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Browse Templates</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top AdSense Banner Placeholder -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+        <div class="adsense-slot bg-slate-100 border border-dashed border-slate-300 rounded-lg p-3 text-center text-xs text-slate-400 min-h-[90px] flex flex-col justify-center items-center" id="ad-slot-header">
+            <span class="font-semibold uppercase tracking-wider text-[10px] text-slate-400">Advertisement</span>
+            <div class="ad-content text-slate-500 mt-1">Header Ad Banner Space (728x90 / Responsive)</div>
+        </div>
+    </div>
+
+    <!-- Main Workspace Section -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full" id="optimizer">
+        <!-- Hero Title Header -->
+        <div class="text-center max-w-3xl mx-auto mb-8">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 mb-3">
+                <i class="fa-solid fa-fire text-amber-500"></i> Optimized for TikTok, Shorts & Reels
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Craft Viral Social Media Hooks That Stop The Scroll
+            </h1>
+            <p class="mt-3 text-base text-slate-600">
+                Analyze hook strength, character limits, power words, and test visual mobile screen previews before posting.
+            </p>
+        </div>
+
+        <!-- Main Tool Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+            <!-- Left / Center Column: Editor & Analytics (8 cols) -->
+            <div class="lg:col-span-8 space-y-6">
+
+                <!-- Platform Tabs -->
+                <div class="bg-white p-2 rounded-xl border border-slate-200 shadow-sm flex flex-wrap gap-2 text-xs sm:text-sm font-medium">
+                    <button onclick="switchPlatform('tiktok')" id="btn-tiktok" class="platform-tab flex-1 flex items-center justify-center space-x-2 py-2.5 px-3 rounded-lg bg-emerald-600 text-white font-semibold transition">
+                        <i class="fa-brands fa-tiktok text-base"></i>
+                        <span>TikTok</span>
+                    </button>
+                    <button onclick="switchPlatform('shorts')" id="btn-shorts" class="platform-tab flex-1 flex items-center justify-center space-x-2 py-2.5 px-3 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                        <i class="fa-brands fa-youtube text-base text-red-600"></i>
+                        <span>YouTube Shorts</span>
+                    </button>
+                    <button onclick="switchPlatform('reels')" id="btn-reels" class="platform-tab flex-1 flex items-center justify-center space-x-2 py-2.5 px-3 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                        <i class="fa-brands fa-instagram text-base text-pink-600"></i>
+                        <span>IG Reels</span>
+                    </button>
+                    <button onclick="switchPlatform('twitter')" id="btn-twitter" class="platform-tab flex-1 flex items-center justify-center space-x-2 py-2.5 px-3 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                        <i class="fa-brands fa-x-twitter text-base"></i>
+                        <span>X / Twitter</span>
+                    </button>
+                    <button onclick="switchPlatform('linkedin')" id="btn-linkedin" class="platform-tab flex-1 flex items-center justify-center space-x-2 py-2.5 px-3 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                        <i class="fa-brands fa-linkedin text-base text-blue-600"></i>
+                        <span>LinkedIn</span>
+                    </button>
+                </div>
+
+                <!-- Text Input Card -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 relative">
+                    <div class="flex justify-between items-center mb-3">
+                        <label for="hook-input" class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-pen-to-square text-emerald-600"></i>
+                            <span>Write or Paste Your Title / Hook:</span>
+                        </label>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="clearText()" class="text-xs text-slate-500 hover:text-slate-700 px-2.5 py-1 rounded border border-slate-200 hover:bg-slate-50 transition">
+                                <i class="fa-solid fa-trash-can mr-1"></i> Clear
+                            </button>
+                            <button onclick="copyText()" class="text-xs text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded border border-emerald-200 font-semibold transition">
+                                <i class="fa-solid fa-copy mr-1"></i> Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <textarea id="hook-input" rows="4" class="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-slate-800 placeholder-slate-400 text-base resize-y transition shadow-inner" placeholder="E.g., Stop wasting time on bad captions! Here are 3 secret psychological hooks that get 1M+ views..."></textarea>
+
+                    <!-- Limit Indicator Bar -->
+                    <div class="mt-4">
+                        <div class="flex justify-between text-xs font-semibold text-slate-500 mb-1">
+                            <span id="platform-limit-label">TikTok Title Limit</span>
+                            <span id="char-count-display">0 / 150 chars</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                            <div id="progress-bar" class="bg-emerald-500 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Counter Metrics -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-5 border-t border-slate-100 text-center">
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="block text-xl font-bold text-slate-800" id="stat-words">0</span>
+                            <span class="text-xs text-slate-500 font-medium">Word Count</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="block text-xl font-bold text-slate-800" id="stat-first3">0</span>
+                            <span class="text-xs text-slate-500 font-medium">1st 3 Words</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="block text-xl font-bold text-slate-800" id="stat-readtime">0s</span>
+                            <span class="text-xs text-slate-500 font-medium">Est. Read Time</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="block text-xl font-bold text-slate-800" id="stat-powercount">0</span>
+                            <span class="text-xs text-slate-500 font-medium">Power Words</span>
                         </div>
                     </div>
                 </div>
-                <div class="main-header"></div>
-            </header>
 
-            <div class="slider">
-                <img src="/img/slider/slider.jpg" alt="">
+                <!-- Hook Analysis Card -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+                    <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-emerald-600"></i>
+                        <span>Viral Hook Score & Insights</span>
+                    </h3>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-6 mb-6">
+                        <!-- Score Radial Badge -->
+                        <div class="relative w-28 h-28 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-slate-100" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path id="score-circle" class="text-emerald-500 stroke-current transition-all duration-500 ease-out" stroke-dasharray="0, 100" stroke-width="3.5" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            </svg>
+                            <div class="absolute text-center">
+                                <span class="text-2xl font-extrabold text-slate-900" id="score-value">0%</span>
+                                <span class="block text-[10px] font-semibold uppercase text-slate-400">Hook Score</span>
+                            </div>
+                        </div>
+
+                        <!-- Analysis Highlights -->
+                        <div class="space-y-2 flex-grow text-sm">
+                            <div class="flex items-center space-x-2" id="feedback-power">
+                                <i class="fa-solid fa-circle-xmark text-red-400"></i>
+                                <span class="text-slate-600">Add power/curiosity words (e.g. <em>Secret, Stop, Proven, How To</em>)</span>
+                            </div>
+                            <div class="flex items-center space-x-2" id="feedback-length">
+                                <i class="fa-solid fa-circle-xmark text-red-400"></i>
+                                <span class="text-slate-600">Keep initial title under 80 characters for instant mobile visibility</span>
+                            </div>
+                            <div class="flex items-center space-x-2" id="feedback-numbers">
+                                <i class="fa-solid fa-circle-xmark text-red-400"></i>
+                                <span class="text-slate-600">Include numbers or specific lists (e.g. <em>3 ways, $100k, 5 mistakes</em>)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Power Words Found Tags -->
+                    <div>
+                        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Detected Power Words & Emotional Triggers:</span>
+                        <div class="flex flex-wrap gap-2" id="power-words-container">
+                            <span class="text-xs bg-slate-100 text-slate-400 px-3 py-1 rounded-full italic">No power words detected yet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mid Page In-Article Ad Banner -->
+                <div class="adsense-slot bg-slate-100 border border-dashed border-slate-300 rounded-lg p-3 text-center text-xs text-slate-400 min-h-[120px] flex flex-col justify-center items-center" id="ad-slot-mid">
+                    <span class="font-semibold uppercase tracking-wider text-[10px] text-slate-400">Advertisement</span>
+                    <div class="ad-content text-slate-500 mt-1">In-Article Responsive Ad Slot</div>
+                </div>
+
             </div>
 
+            <!-- Right Column: Live Mobile Screen Preview & Sidebar Ad (4 cols) -->
+            <div class="lg:col-span-4 space-y-6">
 
+                <!-- Mobile Simulator Phone Frame -->
+                <div class="bg-slate-900 rounded-[3rem] p-4 border-4 border-slate-800 shadow-2xl max-w-xs mx-auto text-white relative overflow-hidden">
+                    <!-- Phone Speaker & Camera Notch -->
+                    <div class="absolute top-3 left-1/2 -translate-x-1/2 w-28 h-4 bg-slate-800 rounded-full z-20"></div>
 
-		<!-- JS here -->
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/isotope.pkgd.min.js"></script>
-        <script src="js/one-page-nav-min.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/jquery.meanmenu.min.js"></script>
-        <script src="js/ajax-form.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.scrollUp.min.js"></script>
-        <script src="js/imagesloaded.pkgd.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+                    <!-- Screen Content Box -->
+                    <div class="relative bg-slate-950 rounded-[2.2rem] h-[480px] overflow-hidden flex flex-col justify-between pt-8 pb-4 px-4 border border-slate-800">
+                        <!-- Top Bar Overlay -->
+                        <div class="flex justify-between items-center text-xs text-slate-300 z-10 pt-1">
+                            <span class="font-semibold">Live Preview</span>
+                            <span class="bg-red-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider animate-pulse">LIVE</span>
+                        </div>
+
+                        <!-- Mock Video Background Placeholder -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/60 to-black/90 z-0"></div>
+
+                        <!-- Right Sidebar Icons (TikTok/Reels overlay) -->
+                        <div class="absolute right-3 bottom-20 flex flex-col items-center space-y-4 z-10 text-slate-200">
+                            <div class="text-center">
+                                <div class="w-10 h-10 rounded-full bg-slate-800/80 flex items-center justify-center border border-slate-700">
+                                    <i class="fa-solid fa-heart text-red-500 text-sm"></i>
+                                </div>
+                                <span class="text-[10px] font-semibold mt-1 block">42.8K</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-10 h-10 rounded-full bg-slate-800/80 flex items-center justify-center border border-slate-700">
+                                    <i class="fa-solid fa-comment text-white text-sm"></i>
+                                </div>
+                                <span class="text-[10px] font-semibold mt-1 block">1.2K</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-10 h-10 rounded-full bg-slate-800/80 flex items-center justify-center border border-slate-700">
+                                    <i class="fa-solid fa-bookmark text-amber-400 text-sm"></i>
+                                </div>
+                                <span class="text-[10px] font-semibold mt-1 block">8.4K</span>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Title & Caption Overlay -->
+                        <div class="z-10 pr-12 pb-2">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="w-7 h-7 rounded-full bg-emerald-500 flex items-center justify-center text-xs font-bold text-white">HC</div>
+                                <span class="text-xs font-bold text-white">@yourcreatorbrand</span>
+                            </div>
+                            <p class="text-xs text-slate-100 font-medium leading-snug line-clamp-4 break-words" id="mobile-preview-text">
+                                Stop wasting time on bad captions! Here are 3 secret psychological hooks that get 1M+ views...
+                            </p>
+                            <span class="inline-block mt-2 text-[10px] text-emerald-400 font-semibold">#viral #contentcreator #hooks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Ad Unit -->
+                <div class="adsense-slot bg-slate-100 border border-dashed border-slate-300 rounded-2xl p-4 text-center text-xs text-slate-400 min-h-[250px] flex flex-col justify-center items-center shadow-sm" id="ad-slot-sidebar">
+                    <span class="font-semibold uppercase tracking-wider text-[10px] text-slate-400">Advertisement</span>
+                    <div class="ad-content text-slate-500 mt-2">Sidebar Rectangle Banner (300x250)</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Section 2: Viral Hook Templates Library -->
+        <section class="mt-16 pt-12 border-t border-slate-200" id="templates">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Proven Templates</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+                        High-Converting Viral Hook Library
+                    </h2>
+                    <p class="text-slate-600 text-sm mt-1">Click any template to load it into the Hook Optimizer editor instantly.</p>
+                </div>
+
+                <!-- Filter Category Buttons -->
+                <div class="flex flex-wrap gap-2 mt-4 md:mt-0 text-xs font-semibold">
+                    <button onclick="filterTemplates('all')" class="tmpl-filter px-3 py-1.5 rounded-lg bg-slate-900 text-white">All Hooks</button>
+                    <button onclick="filterTemplates('curiosity')" class="tmpl-filter px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Curiosity</button>
+                    <button onclick="filterTemplates('negative')" class="tmpl-filter px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Negative / Warning</button>
+                    <button onclick="filterTemplates('story')" class="tmpl-filter px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Storytelling</button>
+                    <button onclick="filterTemplates('list')" class="tmpl-filter px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Numbers & Lists</button>
+                </div>
+            </div>
+
+            <!-- Templates Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="templates-grid">
+                <!-- Javascript will render templates dynamically -->
+            </div>
+        </section>
+
+        <!-- Section 3: High-Value Educational Content for SEO & AdSense Approval -->
+        <section class="mt-16 pt-12 border-t border-slate-200" id="guide">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">
+                    The Science of Short-Form Video Hooks (2025 Creator Guide)
+                </h2>
+
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm space-y-4 leading-relaxed">
+                    <p>
+                        In today's fast-moving social media landscape, viewers decide whether to watch or swipe away within the <strong>first 1.5 to 3 seconds</strong>. Whether you create content for TikTok, YouTube Shorts, or Instagram Reels, your opening hook is the single biggest factor influencing overall video watch time and viral reach.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-slate-800 mt-6 mb-2">3 Pillars of Scroll-Stopping Hooks:</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Pattern Interrupt:</strong> Challenge a common belief or start with an unexpected visual/statement (e.g., <em>"Stop buying expensive camera gear until you see this..."</em>).</li>
+                        <li><strong>Curiosity Gap:</strong> Tease valuable knowledge without spoiling the result immediately (e.g., <em>"The 1 secret method top creators use to 10x their reach..."</em>).</li>
+                        <li><strong>Clear Value Proposition:</strong> Tell the audience exactly what problem you will solve for them in under 30 seconds.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-bold text-slate-800 mt-6 mb-2">Platform Character Limits & Best Practices:</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <span class="font-bold text-slate-900 block">TikTok Title</span>
+                            <span class="text-xs text-slate-500">Max 2,200 chars. Best practice: Keep primary hook in the first 70 characters so it fits on screen.</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <span class="font-bold text-slate-900 block">YouTube Shorts</span>
+                            <span class="text-xs text-slate-500">Max 100 chars. Titles must be concise, keyword-rich, and urgent for maximum CTR.</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <span class="font-bold text-slate-900 block">Instagram Reels</span>
+                            <span class="text-xs text-slate-500">Max 2,200 chars. Only first 125 characters show before the "...more" button.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Frequently Asked Questions (FAQ) Accordion -->
+        <section class="mt-12 max-w-4xl mx-auto" id="faq">
+            <h2 class="text-2xl font-bold text-slate-900 text-center mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3">
+                <details class="bg-white rounded-xl border border-slate-200 p-4 font-medium text-slate-800 group">
+                    <summary class="cursor-pointer flex justify-between items-center text-sm sm:text-base font-semibold">
+                        <span>Why is the opening hook so important for TikTok and Shorts?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                        Algorithms on TikTok, YouTube, and Instagram heavily weight 3-second retention rates. If viewers swipe away instantly, the algorithm stops recommending your video. A strong title hook retains viewers longer, signaling high engagement to the algorithm.
+                    </p>
+                </details>
+
+                <details class="bg-white rounded-xl border border-slate-200 p-4 font-medium text-slate-800 group">
+                    <summary class="cursor-pointer flex justify-between items-center text-sm sm:text-base font-semibold">
+                        <span>How does the Hook Score calculation work?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                        Our algorithm evaluates emotional triggers, power words, curiosity gaps, character lengths, and list numbers. It calculates an overall score from 0% to 100% to help you refine your hook for maximum click-through rates.
+                    </p>
+                </details>
+
+                <details class="bg-white rounded-xl border border-slate-200 p-4 font-medium text-slate-800 group">
+                    <summary class="cursor-pointer flex justify-between items-center text-sm sm:text-base font-semibold">
+                        <span>Is HookCraft completely free to use?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                        Yes! HookCraft is 100% free with no sign-ups or paid subscriptions required. You can test and copy unlimited titles for all major platforms.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Banner Ad Placeholder -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+        <div class="adsense-slot bg-slate-100 border border-dashed border-slate-300 rounded-lg p-3 text-center text-xs text-slate-400 min-h-[90px] flex flex-col justify-center items-center" id="ad-slot-footer">
+            <span class="font-semibold uppercase tracking-wider text-[10px] text-slate-400">Advertisement</span>
+            <div class="ad-content text-slate-500 mt-1">Footer Ad Banner Space (728x90)</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-auto py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs text-slate-500">
+                <div>
+                    <span class="font-semibold text-slate-700" id="footer-brand-name">HookCraft</span> &copy; 2025. Built for content creators & marketers.
+                </div>
+                <div class="flex space-x-6">
+                    <button onclick="openModal('privacy-modal')" class="hover:text-slate-800 transition">Privacy Policy</button>
+                    <button onclick="openModal('terms-modal')" class="hover:text-slate-800 transition">Terms of Service</button>
+                    <button onclick="openModal('contact-modal')" class="hover:text-slate-800 transition">About & Contact</button>
+                    <button onclick="openModal('admin-modal')" class="hover:text-emerald-600 transition font-medium">Admin Settings</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODALS ================= -->
+
+    <!-- Admin Settings Modal -->
+    <div id="admin-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-6 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-200">
+                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-sliders text-emerald-600"></i>
+                    <span>Site Owner Settings & Dashboard</span>
+                </h3>
+                <button onclick="closeModal('admin-modal')" class="text-slate-400 hover:text-slate-600">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <p class="text-xs text-slate-500 mb-4">
+                Configure your tracking codes, Google AdSense Pub ID, Google Search Console, and custom branding below. All settings are saved locally to your browser and stored in site configuration.
+            </p>
+
+            <form id="admin-form" onsubmit="saveAdminSettings(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="font-bold text-slate-700 block mb-1">Site Title / Brand Name:</label>
+                    <input type="text" id="cfg-site-title" class="w-full p-2.5 border border-slate-300 rounded-lg text-slate-800" placeholder="HookCraft">
+                </div>
+
+                <div>
+                    <label class="font-bold text-slate-700 block mb-1">Google Analytics 4 (GA4) ID:</label>
+                    <input type="text" id="cfg-ga4-id" class="w-full p-2.5 border border-slate-300 rounded-lg text-slate-800" placeholder="G-XXXXXXXXXX">
+                </div>
+
+                <div>
+                    <label class="font-bold text-slate-700 block mb-1">Google Search Console Verification Meta Tag Code:</label>
+                    <input type="text" id="cfg-gsc-code" class="w-full p-2.5 border border-slate-300 rounded-lg text-slate-800" placeholder="verification_code_string">
+                </div>
+
+                <div>
+                    <label class="font-bold text-slate-700 block mb-1">Google AdSense Publisher ID (ca-pub):</label>
+                    <input type="text" id="cfg-adsense-id" class="w-full p-2.5 border border-slate-300 rounded-lg text-slate-800" placeholder="ca-pub-1234567890123456">
+                </div>
+
+                <div class="pt-2 border-t border-slate-200 flex justify-between items-center">
+                    <button type="button" onclick="resetAdminSettings()" class="text-red-600 hover:underline">Reset Defaults</button>
+                    <div class="space-x-2">
+                        <button type="button" onclick="closeModal('admin-modal')" class="px-4 py-2 border border-slate-300 rounded-lg text-slate-700">Cancel</button>
+                        <button type="submit" class="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold">Save Settings</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-200">
+                <h3 class="text-lg font-bold text-slate-900">Privacy Policy</h3>
+                <button onclick="closeModal('privacy-modal')" class="text-slate-400 hover:text-slate-600">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+                <p>At HookCraft, accessible from our website, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by HookCraft and how we use it.</p>
+                <h4 class="font-bold text-slate-800">Log Files & Analytics</h4>
+                <p>HookCraft follows a standard procedure of using log files and Google Analytics 4 to analyze trends and administer the site.</p>
+                <h4 class="font-bold text-slate-800">Google DoubleClick DART Cookie & AdSense</h4>
+                <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our site and other sites on the internet.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-200">
+                <h3 class="text-lg font-bold text-slate-900">Terms of Service</h3>
+                <button onclick="closeModal('terms-modal')" class="text-slate-400 hover:text-slate-600">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+                <p>By accessing this website, you agree to be bound by these website Terms and Conditions of Use. All materials and tools provided on this website are provided "as is" without warranties of any kind.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & About Modal -->
+    <div id="contact-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-6 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-200">
+                <h3 class="text-lg font-bold text-slate-900">About HookCraft & Contact</h3>
+                <button onclick="closeModal('contact-modal')" class="text-slate-400 hover:text-slate-600">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+                <p><strong>HookCraft</strong> is an open utility web application built to help content creators, copywriters, and video producers craft high-performing hooks and titles for short-form video platforms.</p>
+                <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 mt-3">
+                    <p class="font-bold text-slate-800 mb-1">Get in Touch:</p>
+                    <p>Have suggestions, feedback, or business inquiries? Contact us at: <a href="mailto:support@example.com" class="text-emerald-600 underline">support@example.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script src="js/app.js"></script>
+</body>
 </html>
